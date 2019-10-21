@@ -12,6 +12,7 @@ Some modern android phones support it but after some time googleing a few proble
 	* (may actually be false if there is a way please tell me)
 
 So the plan is to build a device that connects to multiple headphones/speakers and acts like a speaker itself so one can connect to and it forwards the data to the speakers.
+
 ---
 
 ## Project Notes
@@ -34,9 +35,11 @@ So the plan is to build a device that connects to multiple headphones/speakers a
 
 #### To Do (Interfacing):
 - [ ] Write all the code
-	- [ ] Since btstack (the library) doesnt work with the arduino ide all the librarys (i2c lct and rotary encoder) will have to be written from the grond up for the esp 32 board.
-		- [ ] Rotary encoder: Will be ideally one function with a static variable that increments and decrements according to the input.
-		- [ ] I2C LCD: should support marking (inverting), writing text, and scrolling using a display struct and the esp32 i2c driver.
+	- ~Since btstack (the library) doesnt work with the arduino ide all the librarys (i2c lct and rotary encoder) will have to be written from the grond up for the esp 32 board.~
+	- you just have to include the right header from the esp-idf with complete path to include everything you need (I find that out now were all the peripherals are done and thus the arduino libs aren' relevant anymore. -fml)
+		- [x] Rotary encoder: Will be ideally one function with a static variable that increments and decrements according to the input.
+		- [x] I2C LCD: should support marking (inverting), writing text, and scrolling using a display struct and the esp32 i2c driver.
+			- [ ]  > should support marking (inverting)
 
 ### Extras
 
